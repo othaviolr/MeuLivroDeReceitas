@@ -61,6 +61,15 @@ namespace MyRecipeBook.Exceptions {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Email already registered..
+        /// </summary>
+        public static string EMAIL_ALREADY_REGISTERED {
+            get {
+                return ResourceManager.GetString("EMAIL_ALREADY_REGISTERED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The e-mail must not be empty..
         /// </summary>
         public static string EMAIL_EMPTY {
@@ -102,6 +111,15 @@ namespace MyRecipeBook.Exceptions {
         public static string UNKNOWN_ERROR {
             get {
                 return ResourceManager.GetString("UNKNOWN_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Unknown error..
+        /// </summary>
+        public static string UNKOWN_ERROR {
+            get {
+                return ResourceManager.GetString("UNKOWN_ERROR", resourceCulture);
             }
         }
     }
