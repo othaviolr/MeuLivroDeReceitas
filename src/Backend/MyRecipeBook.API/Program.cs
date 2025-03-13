@@ -49,3 +49,4 @@ void MigrateDatabase()
 
     DataBaseMigration.Migrate(databaseType, connectionString, serviceScope.ServiceProvider);
 }
+
