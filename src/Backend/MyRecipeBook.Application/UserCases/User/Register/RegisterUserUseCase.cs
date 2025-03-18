@@ -38,7 +38,6 @@ public class RegisterUserUseCase : IRegisterUserUseCase
         await Validate(request);
 
         var user = _mapper.Map<Domain.Entities.User>(request);
-
         user.Password = _passwordEncripter.Encrypt(request.Password);
 
         await _writeOnlyRepository.Add(user);
@@ -47,7 +46,7 @@ public class RegisterUserUseCase : IRegisterUserUseCase
 
         return new ResponseRegisteredUserJson
         {
-            Name = request.Name,
+            Name = user.Name,
         };
     }
 
