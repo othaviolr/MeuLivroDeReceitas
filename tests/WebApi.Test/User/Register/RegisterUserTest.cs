@@ -15,7 +15,7 @@ public class RegisterUserTest : MyRecipeBookClassFixture
 {
     private readonly string method = "user";
 
-    public RegisterUserTest(CustomWebApplicationFactory factory) :base(factory) { }
+    public RegisterUserTest(CustomWebApplicationFactory factory) : base(factory) { }
 
     [Fact]
     public async Task Success()
@@ -31,7 +31,9 @@ public class RegisterUserTest : MyRecipeBookClassFixture
         var responseData = await JsonDocument.ParseAsync(reponseBody);
 
         responseData.RootElement.GetProperty("name").GetString().Should().NotBeNullOrWhiteSpace().And.Be(request.Name);
+        responseData.RootElement.GetProperty("tokens").GetProperty("accessToken").GetString().Should().NotBeNullOrEmpty();
     }
+
     [Theory]
     [ClassData(typeof(CultureInlineDataTest))]
     public async Task Error_Empty_Name(string culture)
