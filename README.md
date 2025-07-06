@@ -2,6 +2,6 @@ O projeto é uma API robusta desenvolvida em .NET e Azure para gerenciar receita
 
 🥑 Principais funcionalidades:
 
-🔹 Autenticação segura via e-mail, Google e Microsoft
-🔹 Criação e compartilhamento de receitas entre usuários
-🔹 Integração com IA: tem poucos ingredientes em casa? A API sugere pratos com o que você tem disponível em casa! 🍳
+-🔹 Autenticação segura via e-mail, Google e Microsoft
+-🔹 Criação e compartilhamento de receitas entre usuários
+-🔹 Integração com IA: tem poucos ingredientes em casa? A API sugere pratos com o que você tem disponível em casa! 🍳
